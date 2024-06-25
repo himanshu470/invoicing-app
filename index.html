@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoicing App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="images/transparent-logo.png" alt="logo" width="300" height="200">
+            </div>
+            <div class="col-6">
+                <h1 class="invoice">INVOICE</h1>
+                <div>
+                    <label for="number" class="blueColor">NUMBER:</label>
+                    <input type="text" id="number" name="number" class="inputBox" placeholder="SM-24-VF-002">
+                </div>
+                <div>
+                    <label for="date" class="blueColor">DATE:</label>
+                    <input type="date" id="date" name="date" class="inputBox">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <label for="website">Website:</label>
+                    <input type="text" id="website" name="website" class="inputBox">
+                </div>
+                <div>
+                    <label for="attn">Attn:</label>
+                    <input type="text" id="attn" name="attn" class="inputBox">
+                </div>
+                <div>
+                    <label for="designation">Designation:</label>
+                    <input type="text" id="designation" name="designation" class="inputBox">
+                </div>
+                <div>
+                    <label for="mobile">Mobile:</label>
+                    <input type="tel" id="mobile" name="mobile" class="inputBox">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="inputBox">
+                </div>
+                <div class="buttons">
+                    <button type="submit" id="submit" class="submitBtn">Add New Client</button>
+                    <button type="submit" id="selectClient" class="submitBtn">Select Client</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="search-results-website"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table" id="customers">
+                    <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Website</th>
+                        <th>Attn</th>
+                        <th>Designation</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody1"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div>
+                    <h5 class="blueColorAll">DESCRIPTION</h5>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" id="service" class="inputBox">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div>
+                    <h5 class="blueColorAll">QTY</h5>
+                </div>
+                <div>
+                    <input type="number" id="quantity" class="inputBox" oninput="if (this.value < 1) this.value = 1">
+                </div>
+            </div>
+            <div class="col-2">
+                <div>
+                    <h5 class="blueColorAll">PRICE</h5>
+                </div>
+                <div>
+                    <input type="number" id="price" class="inputBox">
+                </div>
+            </div>
+            <div class="col-2">
+                <div>
+                    <h5 class="blueColorAll">TOTAL</h5>
+                </div>
+                <div>
+                    <input type="number" id="total" class="inputBox">
+                </div>
+            </div>
+            <div class="buttons">
+                    <button type="submit" id="submitService">Add New Service</button>
+                    <button type="submit" id="selectService">Select Service</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="search-results-service"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody2"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div>
+                    <h5 class="blueColorAll">PAYMENT METHOD</h5>
+                </div>
+                <div>
+                    <p> Acc Name:SAFYRUS MEDIA<br>
+                        Acc No: 9999 5555 999 789<br>
+                        IFSC: HDFC0001629<br>
+                        Email: accounts@safyrus.in<br>
+                        Pan Card: AFEFS3914E<br>
+                        GSTN: 36AFEFS3914E1Z4
+                    </p>
+                </div>
+            </div>
+            <div class="col-2">
+                <p class="subtotal">Subtotal</p>
+                <p>Discount</p>
+                <p>CGST (9%)</p>
+                <p>SGST (9%)</p>
+                <p>GRAND TOTAL</p>
+            </div>
+            <div class="col-2">
+                <input type="number" id="subtotal" class="subtotal inputBox">
+                <input type="number" id="discount" class="paymentInputBoxes inputBox">
+                <input type="number" id="cgst" class="paymentInputBoxes inputBox">
+                <input type="number" id="sgst" class="paymentInputBoxes inputBox">
+                <input type="number" id="grandTotal" class="paymentInputBoxes inputBox">
+                <button id="calculateButton" class="mt-3">Calculate</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <h2 class="thankYou">THANK YOU!</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="container">
+        <div class="row">
+            <p class="footerAddress">Safyrus Media, 701, Sapphire Block, Rainbow Vistas, Moosapet, Hyderabad, India -
+                500018</p>
+
+            <div class="col-4 footerIcon">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+91 9176333857" class="footerValues">+91 9176333857</a>
+            </div>
+            <div class="col-4 footerIcon">
+                <i class="fa-solid fa-globe"></i>
+                <a href="https://safyrus.com/" class="footerValues">www.safyrus.com</a>
+            </div>
+            <div class="col-4 footerIcon">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:hi@safyrus.com" class="footerValues">hi@safyrus.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-5 text-center">
+    <button id="downloadInovice">Download Invoice</button>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js" type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

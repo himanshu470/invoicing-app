@@ -1,0 +1,139 @@
+/*@media print {*/
+/*    body {*/
+/*        width: 100%;*/
+/*        height: 100vh;*/
+/*        overflow: hidden;*/
+/*    }*/
+/*}*/
+
+.invoice {
+    color: #40BBD6;
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 60px;
+}
+.blueColor {
+    color: #40BBD6;
+    font-weight: 700;
+}
+.blueColorAll {
+    color: #40BBD6;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.subtotal {
+    margin-top: 60px;
+}
+.thankYou {
+    margin: 20px 0px;
+    color: #40BBD6;
+    font-weight: 700;
+}
+.footer {
+    background-color: #40BBD6;
+    padding: 20px 0px;
+}
+.footerAddress {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.footerIcon {
+    text-align: center;
+    color: white;
+}
+.footerValues {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 60px;
+}
+
+.inputBox {
+    font-size: 13px;
+    border-radius: 4px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+    border: 1px solid #dee1e2;
+    color: rgb(14, 14, 16);
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.inputBox:hover {
+    border-color: #ccc;
+}
+.inputBox:focus{
+    border-color: #9147ff;
+    background: #fff;
+}
+#submit, #submitService, #selectClient, #selectService, #downloadInovice, #calculateButton {
+    width: 180px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #40BBD6;
+    border-radius: 20px;
+}
+#submit:hover, #submitService:hover, #selectClient:hover, #selectService:hover, #downloadInovice:hover, #calculateButton:hover {
+    background-color: #40BBD6;
+    color: white;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+input[type="search"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add CSS to make the second table look good */
+#service-table {
+    margin-top: 20px; /* add some space between the tables */
+}
+
+#service-table th, #service-table td {
+    padding: 12px; /* increase padding for better readability */
+}
+
+#service-table th {
+    background-color: #e0e0e0; /* change background color for better contrast */
+}
+.buttons {
+    padding: 15px 0;
+}
+.paymentInputBoxes {
+    margin: 5px 0;
+}
+.list-item {
+    padding: 10px 0;
+    border: 1px solid;
+}
+.table {
+    margin-top: 10px;
+}
